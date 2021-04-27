@@ -1,0 +1,104 @@
+.mentorship {
+  &-container  {
+    position: fixed;
+    bottom: 0;
+    left: 0%;
+    padding: 1rem 2.6rem 1rem 1.8rem;
+    transform: translate(-100.5%, -50%);
+    color: var(--secondary-background);
+    background: linear-gradient(65deg, var(--secondary-background) 25%, var(--white) 25%);
+    z-index: 200;
+    transition: transform .3s;
+  }
+
+  &-indicator {
+    position: absolute;
+    top: 50%;
+    right: -3.7rem;
+    height: 100%;
+    transform: translateY(-50%);
+    background: var(--secondary-background);
+    color: var(--white);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    border-radius: 0 4px 4px 0;
+
+    & label {
+      display: inline-block;
+      padding: .8rem;
+      cursor: pointer;
+      font-size: 1.25rem;
+      font-weight: 700;
+      width: 4rem;
+      padding-top: .8rem;
+      padding-right: 1.2rem;
+    }
+  }
+
+  &-info{
+    &-container {
+      display: flex;
+      gap: 2rem;
+      text-align: center;
+      align-items: center;
+
+      h4 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+    }
+    
+    &-links{
+      &-container {
+        margin-top: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &-item {
+        font-size: 2rem;
+        height: 4rem;
+        width: 4rem;
+        margin: 0 1rem;
+        padding: 1.4rem;
+        border-radius: 50%;
+        background: var(--secondary-background);
+        box-shadow: inset -2px -2px rgba(0,0,0,.3),
+          0 0 1px 1px rgba(0,0,0,.3);
+        transition: background .15s, color .15s;
+
+        & a{
+          color: var(--white);
+        }
+
+        &:hover {
+          background: var(--white);
+
+          & a {
+            color: var(--secondary-background);
+          }
+        }
+      }
+    }
+
+    &-img-box {
+      height: 8rem;
+      width: 8rem;
+      border-radius: 50%;
+      overflow: hidden;
+
+      & img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+#mentor {
+  display: none;
+}

@@ -1,0 +1,123 @@
+.btn {
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+  
+  &-primary {
+    color: var(--white);
+    position: relative;
+    background: transparent;
+    border: none;
+    min-width: 16rem;
+    font-size: 1.6rem;
+    
+    &-outer {
+      width: 100%;
+      background: var(--secondary-background);
+      color: var(--white);
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: .4rem;
+      transition: transfrom .2s;
+
+      &:hover {
+        transform: translateY(-1px);
+      }
+
+      &:focus,
+      &:active {
+        outline: none;
+        transform: translateY(3px);
+        -webkit-transform: translateY(3px);
+      }
+    }
+
+    &-outer:active + &-inner {
+      box-shadow: 0 2px 2px -1px var(--secondary-background);
+    }
+
+    &-inner {
+      position: absolute;
+      bottom: -.6rem;
+      left: 0;
+      border-radius: .4rem;
+      background: var(--secondary-background-dark);
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      box-shadow: 0 4px 4px -2px var(--secondary-background);
+    }
+  }
+
+  &-secondary {
+    height: 100%;
+    min-width: 16rem;
+    font-size: 1.6rem;
+    position: relative;
+    border-radius: 50px;
+    padding: 1.2rem 1.6rem;
+    background: transparent;
+    color: var(--secondary-background-dark);
+    border: 1px solid var(--secondary-background);
+    box-shadow: 0 0 2px 2px var(--secondary-background-dark);
+    transform: translateY(2px);
+    transition: all .2s;
+
+    &:hover {
+      transform: translateY(3px);
+      box-shadow: 0 0 2px 1px var(--secondary-background-dark);
+    }
+    &:active {
+      transform: translateY(5px);
+      box-shadow: 0 0 1px 1px var(--secondary-background-dark);
+    }
+  }
+
+  $height: 4rem;
+  $width: 18rem;
+
+  &-3d {
+    margin: auto;
+    font-size: 1.4rem;
+    height: $height;
+    cursor: pointer;
+    min-width: $width;
+    text-align: center;
+    display: inline-block;
+    transition: all ease 0.3s;
+    transform-style: preserve-3d;
+    
+    .default, .hover  {
+      border-radius: 2px;
+      background-color: var(--secondary-background);
+      color: #fff;
+      height: $height;
+      line-height: $height;
+      transition: background 0.3s ease;
+      text-transform: uppercase;
+    }
+    
+    .default  {
+      transform: translateZ($height/2);
+    }
+    
+    .hover  {
+      background: var(--secondary-background-dark);
+      transform: 
+        rotateX(-90deg) 
+        translateZ(-$height/2);
+    }
+    
+    &:hover {
+      transform: rotateX(90deg);
+      
+      & .default  {
+        background: var(--secondary-background-dark);
+      }
+    }
+  }
+}

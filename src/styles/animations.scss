@@ -1,0 +1,44 @@
+@keyframes wave{
+  0%, 100% {
+    transform: rotate(60deg) scale(1);
+  }
+  50% {
+    transform: rotate(30deg) scale(1.1);
+  }
+}
+
+@keyframes marquee-text {
+  0%, 100% {
+    background-position: left;
+  }
+
+  50% {
+    background-position: right;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce-shadow {
+  0%, 100% {
+    // transform: scale(.8), translateX(-30%), translateY(0);
+    transform: scale(.9);
+    background: rgba(0,0,0,.3);
+    filter: blur(1px);
+  }
+
+  50% {
+    // transform: scale(1), translateX(-30%), translateY(10px);
+    transform: scale(1);
+    background: rgba(0,0,0,.15);
+    filter: blur(2px);
+  }
+}

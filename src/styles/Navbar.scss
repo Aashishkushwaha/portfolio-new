@@ -1,0 +1,112 @@
+.nav{
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-logo-box {
+    width: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  &-logo {
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  &-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    &__item {
+      display: inline-block;
+      margin: 1rem;
+      position: relative;
+      // padding: .8rem 1rem;
+      text-transform: capitalize;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        width: 0%;
+        height: 100%;
+        z-index: -1;
+        transition: width .2s;
+      }
+
+      &::before {
+        left: 0;
+        transform-origin: left;
+        border-top: 2px solid var(--primary-text);
+      }
+      &::after {
+        right: 0;
+        transform-origin: right;
+        border-bottom: 2px solid var(--primary-text);
+      }
+
+      &:not(.active-link):hover::before,
+      &:not(.active-link):hover::after {
+        width: 100%;
+      }
+
+      &:not(.active-link):focus-within::before,
+      &:not(.active-link):focus-within::after {
+        width: 100%;
+      }
+
+      & a {
+        color: inherit;
+        font-size: 1.6rem;
+        padding: .8rem 1rem;
+        text-decoration: none;
+        display: inline-block;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+.active-link {
+  background: var(--secondary-background);
+  color: var(--white);
+  border-radius: 2px;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background: var(--secondary-background-dark);
+  }
+}
+
+.sound_nav_item {
+  font-size: 1.8rem;
+  padding: .8rem;
+  margin: .4rem;
+  width: 20px;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 960px) {
+  .nav-list__item {
+    margin: .6rem;
+    padding: .4rem .8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-list {
+    display: none;
+  }
+}
