@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0rem 8rem;
+    padding: .5rem 8rem;
   }
 
   &-logo-box {
@@ -213,7 +213,7 @@
 @media screen and (max-width: 960px) {
   .nav{
     &-container { 
-      padding: 0 2rem;
+      padding: .5rem 2rem;
     }
   }
 
@@ -223,7 +223,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
   .nav-list {
     display: none;
   }
