@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0rem 8rem;
   }
 
   &-logo-box {
@@ -98,11 +99,25 @@
 }
 
 .hamberger {
+  &-active-link {
+    background: var(--secondary-background-dark);
+    color: var(--link-color);
+    border-radius: 2px;
+  
+    &:hover,
+    &:focus,
+    &:focus-within {
+      background: var(--secondary-background-dark);
+      color: var(--black);
+    }
+  }
+
   &-container {
     display: flex;
     cursor: pointer;
-    flex-direction: column;
+    position: relative;
     align-items: flex-end;
+    flex-direction: column;
 
     & span {
       display: inline-block;
@@ -121,25 +136,87 @@
     }
   }
 
-  &-nav-list {
-    &-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 20%;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: var(--secondary-background);
-      color: var(--primary-text);
+  &-nav {
+    &-list {
+      &-container {
+        top: 100%;
+        right: 10px;
+        display: flex;
+        overflow-y: auto;
+        padding: 1rem 4rem;
+        position: absolute;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        color: var(--primary-text);
+        transition: height .3s, padding .35s;
+        background: var(--secondary-background);
+      }
+
+      &__item {
+        margin: 1rem;
+        position: relative;
+        display: inline-block;
+        text-transform: capitalize;
+  
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          display: inline-block;
+          top: 0;
+          width: 0%;
+          height: 1%;
+          z-index: 0;
+          transition: width .2s;
+        }
+  
+        &::before {
+          left: 0;
+          transform-origin: left;
+          border-top: 2px solid var(--primary-text);
+        }
+        &::after {
+          right: 0;
+          top: 100%;
+          transform-origin: right;
+          border-bottom: 2px solid var(--primary-text);
+        }
+  
+        &:not(.hamberger-active-link):hover::before,
+        &:not(.hamberger-active-link):hover::after {
+          width: 100%;
+        }
+  
+        &:not(.hamberger-active-link):focus-within::before,
+        &:not(.hamberger-active-link):focus-within::after {
+          width: 100%;
+        }
+  
+        & a {
+          color: inherit;
+          font-size: 1.6rem;
+          padding: .8rem 1rem;
+          text-decoration: none;
+          display: inline-block;
+  
+          &:focus {
+            outline: none;
+          }
+        }
+      }
     }
   }
 }
 
 
 @media screen and (max-width: 960px) {
+  .nav{
+    &-container { 
+      padding: 0 2rem;
+    }
+  }
+
   .nav-list__item {
     margin: .6rem;
     padding: .4rem .8rem;

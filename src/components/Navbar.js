@@ -6,7 +6,8 @@ import "../styles/Navbar.scss"
 const Navbar = ({props: {theme, soundEnabled, setSoundEnabled}}) => {
   let loc = window.location
   const [active, setActive] = useState(loc.hash.split("#")[1] ?? '')
-  
+  const [menuOpen, setMenuOpen] = useState(false)
+
   const onChangeHandler = (selected) => {
     setActive(selected)
     if(soundEnabled)
@@ -27,7 +28,7 @@ const Navbar = ({props: {theme, soundEnabled, setSoundEnabled}}) => {
     document.documentElement.scrollTop = 0;
   }
 
-  if(window.innerWidth > 680)
+  if(window.innerWidth > 720)
     return (
       <header>
         <nav className="nav-container">
@@ -65,18 +66,23 @@ const Navbar = ({props: {theme, soundEnabled, setSoundEnabled}}) => {
               onClick={scrollToTop}
               className="nav-logo" src={`./assets/images/logo_${theme === "light" ? 'light' : 'dark'}.svg`} alt="Aashish Kushwaha"/>
           </div>
-          <div className="hamberger-container">
+          <div className="hamberger-container" onClick={() => setMenuOpen(open => !open)}>
             <span />
             <span />
             <span />
           </div>
-          <ul className="hamberger-nav-list-container">
+          <ul className="hamberger-nav-list-container" 
+            style={{
+              height: menuOpen ? '270px': 0,
+              padding: menuOpen ? '1rem 4rem': 0,
+            }}
+          >
             {
               NAV_LINKS.map(item => (
                 <li key={item} onClick={() => onChangeHandler(item)} 
-                  className={`nav-list__item ${active === item && 'active-link'}`}
+                  className={`hamberger-nav-list__item ${active === item && 'hamberger-active-link'}`}
                 >
-                  <a href={`#${item}`} className="nav-link">{item}</a>
+                  <a href={`#${item}`} className="hamberger-nav-link">{item}</a>
                 </li>
               ))
             }

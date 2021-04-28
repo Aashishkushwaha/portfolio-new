@@ -30,7 +30,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: var(--primary-background);
   color: var(--primary-text);
-  padding: 2rem 8rem;
+  /* padding: 2rem 8rem; */
   transition: background-color .5s, color .7s;
 }
 
@@ -87,20 +87,8 @@ header {
   background: var(--secondary-background-dark); 
 }
 
-@media screen and (max-width: 960px) {
-  body {
-    padding: 2rem;
-  }  
-}
-
 @media screen and (max-width: 600px) {
   html {
     font-size: 50%;
-  }
-}
-
-@media screen and (max-width: 460px) {
-  body {
-    padding: 1rem;
   }
 }

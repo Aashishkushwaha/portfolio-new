@@ -243,7 +243,7 @@
 .section {
   min-height: 100vh;
   // padding: 10rem 0;
-  padding: 5rem 0;
+  padding: 5rem 8rem;
   &__heading {
     font-size: 4rem;
     color: var(--secondary-background-dark);
@@ -258,6 +258,12 @@
   }
 }
 
+@media screen and (max-width: 960px) {
+  .section {
+    padding: 2rem;
+  }  
+}
+
 @media screen and (max-width: 600px) {
     .primary-heading {
       font-size: 4.6rem;
@@ -269,6 +275,10 @@
 }
 
 @media screen and (max-width: 460px) {
+  .section {
+    padding: 1rem;
+  }
+
   .highlight {
     display: none;
   }
