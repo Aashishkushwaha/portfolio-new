@@ -91,7 +91,9 @@ const Contact = ({props: {theme, soundEnabled}}) => {
             onClick={e => submitFormHandler(e)}
             onMouseEnter={() => soundEnabled && mouseEnterHandler('Send Message')}
           >
-            <Button label="Send Message" type="primary" />
+            <a href="/" onClick={e => e.preventDefault()}>
+              <Button label="Send Message" type="primary" />
+            </a>
           </span>
         </form>
         <div className="contact-illutration-container">

@@ -45,6 +45,10 @@ mark {
   border-bottom: 3px solid var(--secondary-background);
 }
 
+a {
+  text-decoration: none;
+}
+
 img {
   user-select: none;
 }

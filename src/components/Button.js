@@ -8,16 +8,16 @@ function Button({
 
   if(type === "primary")
     return (
-      <button className="btn btn-primary">
+      <div className="btn btn-primary">
         <span className="btn-primary-outer">{label}</span>
         <span className="btn-primary-inner" />
-      </button>
+      </div>
     )
   else if(type === "secondary")
     return (
-      <button className="btn btn-secondary">
+      <div className="btn btn-secondary">
         {label}
-      </button>
+      </div>
     )
   
   return (

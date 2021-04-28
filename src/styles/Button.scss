@@ -1,7 +1,8 @@
 .btn {
+  border: none;
   cursor: pointer;
   user-select: none;
-  border: none;
+  text-align: center;
   &:focus,
   &:active {
     outline: none;

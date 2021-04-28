@@ -17,8 +17,12 @@ const Home = ({theme}) => {
           <p className="home-dev-work-des" />
         </div>
         <div className="home-dev-buttons-container">
-          <Button label="See My Work"/>
-          <Button label="Contact Me" type="secondary"/>
+          <a href="#projects" className="text-transparent">
+            <Button label="See My Work"/>
+          </a>
+          <a href="#contact" className="text-transparent">
+            <Button label="Get in Touch" type="secondary"/>
+          </a>
         </div>
       </article>
       <div className="home-illustration">
