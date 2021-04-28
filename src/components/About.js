@@ -32,12 +32,12 @@ const About = ({props: {theme, soundEnabled}}) => {
           }
           <div className="mt-36 flex">
             <a
-              style={{ height: '3.6rem' }} target="_blank" rel="noreferrer"
-              href="https://drive.google.com/file/d/1jMqLxIxBoEEaAo7M5dLY083qGYTZESIn/view?usp=sharing" 
-              onMouseEnter={() => soundEnabled && mouseEnterHandler('Download Resume')}
-              onFocus={() => soundEnabled && mouseEnterHandler('Download Resume')}
+              style={{ height: '3.6rem' }} target="_blank" 
+              rel="noreferrer" href="https://resume-aashish.vercel.app/" 
+              onMouseEnter={() => soundEnabled && mouseEnterHandler('Check Resume')}
+              onFocus={() => soundEnabled && mouseEnterHandler('Check Resume')}
             >
-              <Button label="Download Resume" type="3d-rotate"/>
+              <Button label="Check Resume" type="3d-rotate"/>
             </a>
           </div>
         </ul>

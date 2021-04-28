@@ -12,7 +12,7 @@ function Mentorship({props: { soundEnabled, mentorshipOpen, setMentorshipOpen}})
     setMentorshipOpen(updatedMentorshipOpen);
 
     if(updatedMentorshipOpen && soundEnabled)
-      playTextToSound(`Praveen Saraogi, he's a frontend develoer at paytm`)
+      playTextToSound(`Praveen Saraogi, he's a frontend developer at PayTM`)
   }
 
   return (

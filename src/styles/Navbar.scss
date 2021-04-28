@@ -97,6 +97,47 @@
   cursor: pointer;
 }
 
+.hamberger {
+  &-container {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: flex-end;
+
+    & span {
+      display: inline-block;
+      height: 6px;
+      width: 4rem;
+      border-radius: 50px;
+      margin: .2rem 0;
+      background: var(--secondary-background);
+
+      &:first-of-type {
+        width: 3.2rem;
+      }
+      &:last-of-type {
+        width: 2.5rem;
+      }
+    }
+  }
+
+  &-nav-list {
+    &-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--secondary-background);
+      color: var(--primary-text);
+    }
+  }
+}
+
 
 @media screen and (max-width: 960px) {
   .nav-list__item {
