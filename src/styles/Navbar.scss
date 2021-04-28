@@ -143,13 +143,12 @@
         right: 10px;
         display: flex;
         overflow-y: auto;
-        padding: 1rem 4rem;
         position: absolute;
         align-items: center;
         flex-direction: column;
         justify-content: center;
         color: var(--primary-text);
-        transition: height .3s, padding .35s;
+        transition: height .3s, padding .3s;
         background: var(--secondary-background);
       }
 

@@ -11,15 +11,15 @@
     max-width: 48rem;
 
     &-container {
-      text-align: center;
       width: 100%;
+      align-self: center;
+      text-align: center;
     }
   }
 
   &-details-container {
     & li {
       list-style: inside;
-      // display: block;
       font-size: 2rem;
       margin: 1.2rem;
 

@@ -63,8 +63,8 @@ const Navbar = ({props: {theme, soundEnabled, setSoundEnabled}}) => {
         <nav className="nav-container">
           <div className="nav-logo-box">
             <img 
-              onClick={scrollToTop}
-              className="nav-logo" src={`./assets/images/logo_${theme === "light" ? 'light' : 'dark'}.svg`} alt="Aashish Kushwaha"/>
+              onClick={scrollToTop} className="nav-logo" alt="Aashish Kushwaha"
+              src={`./assets/images/logo_${theme === "light" ? 'light' : 'dark'}.svg`}/>
           </div>
           <div className="hamberger-container" onClick={() => setMenuOpen(open => !open)}>
             <span />
@@ -73,8 +73,8 @@ const Navbar = ({props: {theme, soundEnabled, setSoundEnabled}}) => {
           </div>
           <ul className="hamberger-nav-list-container" 
             style={{
-              height: menuOpen ? '270px': 0,
-              padding: menuOpen ? '1rem 4rem': 0,
+              backfaceVisibility: 'hidden', padding: menuOpen ? '1rem 4rem': 0,
+              height: menuOpen ? window.innerWidth < 601 ? '270px' : '340px' : 0,              
             }}
           >
             {
