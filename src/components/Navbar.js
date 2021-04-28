@@ -34,8 +34,9 @@ const Navbar = ({props: {theme, soundEnabled, setSoundEnabled}}) => {
         <nav className="nav-container">
           <div className="nav-logo-box">
             <img 
-              onClick={scrollToTop}
-              className="nav-logo" src={`./assets/images/logo_${theme === "light" ? 'light' : 'dark'}.svg`} alt="Aashish Kushwaha"/>
+              onClick={scrollToTop} className="nav-logo" alt="Aashish Kushwaha"
+              src={`./assets/images/logo_${theme === "light" ? 'light' : 'dark'}.svg`}
+            />
           </div>
           <ul className="nav-list">
             {

@@ -13,6 +13,7 @@ export const saveToSessionStorage = (key, value) => {
 export const getFromSessionStorage = key => sessionStorage.getItem(`APP-${key}`)
 
 export const configureTheme = (theme) => {
+  document.getElementById("favicon").href = `/favicon_${theme}.ico`
   let rootElement = document.querySelector('html')
   rootElement.style.setProperty('--primary-background', THEME_CONFIG[theme].primaryBackground)
   rootElement.style.setProperty('--primary-text', THEME_CONFIG[theme].primaryText)
