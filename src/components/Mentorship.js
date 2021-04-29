@@ -8,18 +8,14 @@ function Mentorship({props: { soundEnabled, mentorshipOpen, setMentorshipOpen}})
   }
 
   const clickMentorshipDrawer = () => {
-    let updatedMentorshipOpen = !mentorshipOpen
-    setMentorshipOpen(updatedMentorshipOpen);
-
-    if(updatedMentorshipOpen && soundEnabled)
-      playTextToSound(`Praveen Saraogi, he's a frontend developer at PayTM`)
+    setMentorshipOpen(true)
+    playTextToSound(`Praveen Saraogi, he's a frontend developer at PayTM`)
   }
 
   return (
-    <section className="mentorship-container"
-      style={{
-        transform: mentorshipOpen ? 'translate(0%, -50%)': 'translate(-100.5%, -50%)'
-      }}
+    <section 
+      className="mentorship-container" onMouseLeave={() => setMentorshipOpen(false)}
+      style={{ transform: mentorshipOpen ? 'translate(0%, -50%)': 'translate(-100.5%, -50%)' }}
     >
       <aside className="mentorship-info-container">
         <div className="mentorship-info-img-box">

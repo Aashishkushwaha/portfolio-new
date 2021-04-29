@@ -21,7 +21,7 @@ const About = ({props: {theme, soundEnabled}}) => {
         </div>
         <ul className="about-details-container">
           <li onMouseEnter={() => {
-            soundEnabled && mouseEnterHandler(`I'm Aashish from Pune, India.`)}
+            soundEnabled && mouseEnterHandler(`I'm Aashish kushwaha from Pune, India.`)}
           }>I'm <mark>Aashish Kushwaha</mark> from Pune, India.</li>
           {
             ABOUT_INFO.map((item, index) => (
@@ -33,7 +33,7 @@ const About = ({props: {theme, soundEnabled}}) => {
           <div className="mt-36 flex">
             <a
               style={{ height: '3.6rem' }} target="_blank" 
-              rel="noreferrer" href="https://resume-aashish.vercel.app/" 
+              rel="noreferrer" href="https://aashish-resume.vercel.app/" 
               onMouseEnter={() => soundEnabled && mouseEnterHandler('Check Resume')}
               onFocus={() => soundEnabled && mouseEnterHandler('Check Resume')}
             >

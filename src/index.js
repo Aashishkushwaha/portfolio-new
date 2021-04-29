@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
   var options = {
     strings: [
       "Create amazing and interactive web applications.",
-      "Creative web develper who loves building frontends."
+      "Creative web developer who loves building frontends."
     ],
     typeSpeed: 30,
     backSpeed: 25,

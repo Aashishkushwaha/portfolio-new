@@ -22,7 +22,7 @@ const App = () => {
       <Navbar props={{theme, soundEnabled, setSoundEnabled}}/>
       <ThemeToggler props={{theme, setTheme, soundEnabled}}/>
       <Home theme={theme}/>
-      <Projects props={{theme}}/>
+      <Projects props={{theme, soundEnabled}}/>
       <Skills props={{theme, soundEnabled}}/>
       <Services props={{theme, soundEnabled}}/>
       <About props={{theme, soundEnabled}}/>

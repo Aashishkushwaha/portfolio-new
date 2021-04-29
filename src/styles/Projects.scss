@@ -8,81 +8,147 @@
     }
   }
 
-  &-wrapper-container {
-    gap: 4rem;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    align-items: center;
-  }
-
-  &-container {
+  &-buttons-container {
     gap: 4rem;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    margin-top: 4rem;
     justify-content: center;
   }
 
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   &-item {
-    &-wrapper {
-      position: relative;
+    border-radius: .8rem;
+    gap: 4rem;
+    padding: 2rem;
+    margin: 1rem 2rem;
+    display: flex;
+    transition: background .3s;
+    box-shadow: inset 0 -4px 10px 1px rgba(0,0,0,.2),
+    inset 0 4px 10px 1px rgba(255,255,255,.2),
+    0 0 4px 1px rgba(0,0,0,.3);
+    background: linear-gradient(90deg, var(--secondary-background-dark) 50%, var(--primary-background) 50%);
+
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+      text-align: left;
+      background: linear-gradient(90deg, var(--primary-background) 50%, var(--secondary-background-dark) 45%);
     }
 
-    width: 10rem;
-    height: 10rem;
-    overflow: hidden;
-    position: relative;
-    border-radius: 50%;
-    background: var(--white);
-    box-shadow: inset 0 0 1px 3px rgba(0,0,0,0.3);
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
+    &-thmbnail {
       width: 100%;
-      transform: translate(-75%, -75%) rotate(25deg);
-      transition: transform .4s;
+      min-height: 32rem;
+      border-radius: .6rem;
+
+      &-container {
+        
+        
+        width: 50%;
+        text-align: center;
+      }
     }
 
-    &-dark::before {
-      background: rgba(29, 161, 242, .3);
-    }
-    &-light::before {
-      background: rgba(59, 136, 91, .3);
-    }
+    &-details {
+      &-container {
+        width: 50%;
+      }
 
-    &:hover::before {
-      animation: skill-animation .3s 1 ease-in-out both;
-    }
+      &-tags {
+        &-container {
+          margin: 2rem 0 1rem;
+          display: flex;
+          gap: 1rem;
+        }
 
-    &-img {
-      width: 60%;
-      height: 60%;
-      filter: grayscale(1);
-      transition: filter .2s;
-    }
+        &-item {
+          display: inline-block;
+          padding: .4rem .8rem;
+          border-radius: 4px;
+          font-size: 1.2rem;
+          background: var(--secondary-background-dark);
+          color: var(--white);
+        }
+      }
 
-    &:hover &-img {
-      filter: grayscale(0)
-    }
+      &-title {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+        user-select: none;
+      }
 
-    &-name {
-      top: 50%;
-      left: 50%;
-      opacity: 0;
-      position: absolute;
-      color: var(--primary-text);
-      transition: transform .4s, opacity .5s;
-      transform: translate(-50%, -50%) scale(.5);
-    }
+      &-description {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+      }
 
-    &:hover + &-name {
-      opacity: 1;
-      font-size: 1.2rem;
-      transform: translate(-50%, 400%) scale(1.2);
+      &-buttons-container {
+        gap: 1.6rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-self: flex-end;
+        margin-top: 2.8rem;
+        
+        & > *:last-child {
+          transform: scale(.85, .8) translateY(-.6rem);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    &-item {
+      gap: 2rem;
+      padding: 3.2rem;
+      flex-direction: column !important;
+      background: linear-gradient(180deg, var(--secondary-background) , var(--primary-background)) !important;
+
+      &-thmbnail {
+        padding: 0rem;
+        min-height: 32rem;
+        box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.3);
+  
+        &-container {
+          width: 100%;
+          text-align: center;
+        }
+      }
+  
+      &-details {
+        &-container {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .projects {
+    &-item {
+      padding: 1.6rem;
+      margin: 1rem 2.8rem;
+      
+      &-thmbnail {
+        width: 100%;
+        min-height: 24rem;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 380px) {
+  .projects {
+    &-item {
+      &-details-buttons-container {
+        justify-content: center;
+      }
     }
   }
 }
