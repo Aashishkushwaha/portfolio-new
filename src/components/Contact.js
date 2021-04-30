@@ -90,6 +90,7 @@ const Contact = ({props: {theme, soundEnabled}}) => {
           <span className="inline-block mt-32"
             onClick={e => submitFormHandler(e)}
             onMouseEnter={() => soundEnabled && mouseEnterHandler('Send Message')}
+            onFocus={() => soundEnabled && mouseEnterHandler('Send Message')}
           >
             <a href="/" onClick={e => e.preventDefault()}>
               <Button label="Send Message" type="primary" />

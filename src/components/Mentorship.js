@@ -8,8 +8,11 @@ function Mentorship({props: { soundEnabled, mentorshipOpen, setMentorshipOpen}})
   }
 
   const clickMentorshipDrawer = () => {
-    setMentorshipOpen(true)
-    playTextToSound(`Praveen Saraogi, he's a frontend developer at PayTM`)
+    let updatedMentorshipOpen = !mentorshipOpen
+
+    if(updatedMentorshipOpen && soundEnabled)
+      playTextToSound(`Praveen Saraogi, he's a frontend developer at PayTM`)
+    setMentorshipOpen(updatedMentorshipOpen)
   }
 
   return (

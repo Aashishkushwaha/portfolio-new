@@ -23,20 +23,17 @@ const Navbar = ({props: {theme, soundEnabled, setSoundEnabled}}) => {
     playTextToSound(`Sound ${newSound ? 'on': 'off'}`)
   }
   
-  const scrollToTop = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-
   if(window.innerWidth > 720)
     return (
       <header>
         <nav className="nav-container">
           <div className="nav-logo-box">
-            <img 
-              onClick={scrollToTop} className="nav-logo" alt="Aashish Kushwaha"
-              src={`./assets/images/logo_${theme === "light" ? 'light' : 'dark'}.svg`}
-            />
+            <a href="#home" onClick={() => setActive("")}>
+              <img 
+                className="nav-logo" alt="Aashish Kushwaha"
+                src={`./assets/images/logo_${theme === "light" ? 'light' : 'dark'}.svg`}
+              />
+            </a>
           </div>
           <ul className="nav-list">
             {
@@ -63,9 +60,12 @@ const Navbar = ({props: {theme, soundEnabled, setSoundEnabled}}) => {
       <header>
         <nav className="nav-container">
           <div className="nav-logo-box">
-            <img 
-              onClick={scrollToTop} className="nav-logo" alt="Aashish Kushwaha"
-              src={`./assets/images/logo_${theme === "light" ? 'light' : 'dark'}.svg`}/>
+            <a href="#home" onClick={() => setActive("")}>
+              <img 
+                className="nav-logo" alt="Aashish Kushwaha"
+                src={`./assets/images/logo_${theme === "light" ? 'light' : 'dark'}.svg`}
+              />
+            </a>
           </div>
           <div className="hamberger-container" onClick={() => setMenuOpen(open => !open)}>
             <span />

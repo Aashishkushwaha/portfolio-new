@@ -49,7 +49,7 @@ export const PROJECTS = [
   {
     title: "Quiz App",
     tags: ["React.js", "Material UI", "Charts"],
-    description: "A React.js quiz app where you can test you knowledge of various topics such as Science, Politics, Sports, Movies & much more.",
+    description: "A React.js quiz app where you can test your knowledge of various topics such as Science, Politics, Sports, Movies & much more.",
     liveUrl: "https://playquizapp.netlify.app",
     githubUrl: "https://github.com/Aashishkushwaha/Quizapp",
     imgUrl: "./assets/images/projects/playQuiz.png"
@@ -65,7 +65,7 @@ export const PROJECTS = [
   {
     title: "CSS Work",
     tags: ["CSS", "Responsive Web Design"],
-    description: "A simple webpage which is modern, responsive, interactive & pleasing for the eyes. It also showcases the latest and modern design patterns, such as responsive images, solid gradients, animations etc.",
+    description: "A simple webpage which is modern, responsive, interactive & pleasing for the eyes. It also showcases the latest and modern design patterns, such as responsive images, solid gradients, animations and many more.",
     liveUrl: "https://csswork.netlify.app",
     imgUrl: "./assets/images/projects/cssWork.png",
     githubUrl: "https://github.com/Aashishkushwaha/responsive_page",
