@@ -48,3 +48,9 @@ export const playTextToSound = text => {
     }
   }
 }
+
+export const pauseTextToSound = () => {
+  if('speechSynthesis' in window) { 
+    window.speechSynthesis.cancel();
+  }
+}

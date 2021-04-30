@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Button from "./Button"
 import { PROJECTS } from '../utils/constants'
 import '../styles/Projects.scss'
-import { playTextToSound } from '../utils/utilFunctions'
+import { playTextToSound, pauseTextToSound } from '../utils/utilFunctions'
 
 const Projects = ({props: {theme, soundEnabled}}) => {
   const [limit, setLimit] = useState(3)
@@ -37,6 +37,7 @@ const Projects = ({props: {theme, soundEnabled}}) => {
                 </div>
                 <div className="projects-item-details-container"
                   onMouseEnter={() => playProjectInfo(`${project.title} is -  ${project.description}`)}
+                  onMouseLeave={pauseTextToSound}
                 >
                   <h3 className="moving-background projects-item-details-title">{project.title}</h3>
                   <p className="projects-item-details-description">{ project.description }</p>
