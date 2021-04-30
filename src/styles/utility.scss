@@ -227,6 +227,11 @@
   background-color: var(--secondary-background);
 }
 
+.anchor-img {
+  height: 0;
+  width: 0;
+}
+
 .wave-animation {
   animation: wave 1s ease-in-out .1s infinite both;
 }
@@ -249,8 +254,8 @@
   &__heading {
     font-size: 4rem;
     color: var(--secondary-background-dark);
-    text-shadow: 2px 2px 3px rgba(0,0,0,.5),
-      2px 2px 2px var(--secondary-background);
+    text-shadow: 1px 1px 3px rgba(0,0,0,.5),
+      1px 1px 3px var(--white);
     padding: 1rem 0;
 
     &-info {

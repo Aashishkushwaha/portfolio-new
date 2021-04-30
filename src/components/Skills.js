@@ -20,15 +20,15 @@ const Skills = ({props: {theme, soundEnabled}}) => {
       <ul className="skills-container">
         {
           SKILLS.map(skill => (
-            <div key={skill} className="skills-item-wrapper">
-              <li 
+            <li key={skill} className="skills-item-wrapper">
+              <div 
                 className={`skills-item skills-item-${theme} flex`} 
                 onMouseEnter={() => soundEnabled && mouseEnterHandler(skill)}
               >
                 <img className="skills-item-img" src={`./assets/images/skills/${skill}.svg`} alt={skill}/>
-              </li>
+              </div>
               <span className="skills-item-name">{skill}</span>
-            </div>
+            </li>
           ))
         }
       </ul>

@@ -79,14 +79,14 @@
 }
 
 .active-link {
-  background: var(--secondary-background);
+  background: var(--secondary-background-dark);
   color: var(--white);
   border-radius: 2px;
 
   &:hover,
   &:focus,
   &:focus-within {
-    background: var(--secondary-background-dark);
+    background: var(--secondary-background);
   }
 }
 

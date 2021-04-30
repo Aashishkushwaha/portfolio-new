@@ -17,7 +17,7 @@ const Services = ({props: {theme, soundEnabled}}) => {
       <ul className="services-container">
         {
           SERVICES.map(({title, bg, tags}) => (
-            <div key={title} className="services-item-wrapper"
+            <li key={title} className="services-item-wrapper"
               onMouseEnter={() => soundEnabled && mouseEnterHandler(title)}
             >
               <img className="services-item-img" src={`./assets/images/services/${bg}_${theme}.svg`} alt={title}/>
@@ -29,7 +29,7 @@ const Services = ({props: {theme, soundEnabled}}) => {
                   ))
                 }
               </ul>
-            </div>
+            </li>
           ))
         }
       </ul>

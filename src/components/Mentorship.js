@@ -38,6 +38,7 @@ function Mentorship({props: { soundEnabled, mentorshipOpen, setMentorshipOpen}})
                   onFocus={() => soundEnabled && mouseEnterHandler(title)}
                 >
                   <a href={url} target="_blank" rel="noreferrer">
+                    <img src="./favicon.ico" alt={title} className="anchor-img"/>
                     <i className={`fab fa-${title}`} />
                   </a>
                 </li>

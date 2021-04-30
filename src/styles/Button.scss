@@ -94,7 +94,7 @@
     
     .default, .hover  {
       border-radius: 2px;
-      background-color: var(--secondary-background);
+      background-color: var(--secondary-background-dark);
       color: #fff;
       height: $height;
       line-height: $height;
@@ -107,7 +107,7 @@
     }
     
     .hover  {
-      background: var(--secondary-background-dark);
+      background: var(--secondary-background);
       transform: 
         rotateX(-90deg) 
         translateZ(-$height/2);
@@ -117,7 +117,7 @@
       transform: rotateX(90deg);
       
       & .default  {
-        background: var(--secondary-background-dark);
+        background: var(--secondary-background);
       }
     }
   }

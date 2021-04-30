@@ -10,9 +10,9 @@ const Footer = ({props:{soundEnabled}}) => {
 
   return (
     <footer className="footer-section">
-      <h5 className="footer-copyright" 
+      <h3 className="footer-copyright" 
         onMouseEnter={() => soundEnabled && playTextToSound("Designed by Aashish Kushwaha.")}
-      >&copy; 2021 | Aashish Kushwaha</h5>
+      >&copy; 2021 | Aashish Kushwaha</h3>
       <ul className="footer-links">
         {
           SOCIAL_CONNECT.map(({title, url}) => (
@@ -21,6 +21,7 @@ const Footer = ({props:{soundEnabled}}) => {
               onFocus={() => soundEnabled && mouseEnterHandler(title)}
             >
               <a target="_blank" rel="noreferrer" href={url}>
+                <img src="./favicon.ico" alt={title} className="anchor-img"/>
                 <i className={`fab fa-${title}`} />
               </a>
             </li>

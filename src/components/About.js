@@ -30,7 +30,7 @@ const About = ({props: {theme, soundEnabled}}) => {
               >{item}</li>
             ))
           }
-          <div className="mt-36 flex">
+          <li className="mt-36 flex">
             <a
               style={{ height: '3.6rem' }} target="_blank" 
               rel="noreferrer" href="https://aashish-resume.vercel.app/" 
@@ -39,7 +39,7 @@ const About = ({props: {theme, soundEnabled}}) => {
             >
               <Button label="Check Resume" type="3d-rotate"/>
             </a>
-          </div>
+          </li>
         </ul>
       </div>
     </section>
