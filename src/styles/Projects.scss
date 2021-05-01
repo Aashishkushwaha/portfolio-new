@@ -39,10 +39,14 @@
       background: linear-gradient(90deg, var(--primary-background) 50%, var(--secondary-background-dark) 45%);
     }
 
+    &:hover &-thmbnail {
+      transform: scale(1.063, 1.14) translateY(1px);
+    }
+
     &-thmbnail {
       width: 100%;
       height: auto;
-      border-radius: .6rem;
+      transition: transform 1s;
 
       &-container {
         width: 50%;
