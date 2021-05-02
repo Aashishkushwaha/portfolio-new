@@ -59,7 +59,7 @@ const Contact = ({props: {theme, soundEnabled}}) => {
     emailjs.sendForm(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, formRef.current, EMAIL_USER_ID)
     .then(() => {
       setLoading(false)
-      soundEnabled && playTextToSound('Message sent successfully.')
+      soundEnabled && playTextToSound(`Thanks for your message, I'll reply back to you shortly.`)
       showToastMessage("Message sent successfully.", "success")
     }, () => {
       setLoading(false)
