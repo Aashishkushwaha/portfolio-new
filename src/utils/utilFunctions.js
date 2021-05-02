@@ -1,4 +1,5 @@
-import { THEME_CONFIG, audio, textToSpeech } from './constants'
+import { THEME_CONFIG, TOAST_CONFIG, audio, textToSpeech } from './constants'
+import { toast } from 'react-toastify'
 
 export const saveToLocalStorage = (key, value) => {
   localStorage.setItem(`APP-${key}`, value)
@@ -53,4 +54,8 @@ export const pauseTextToSound = () => {
   if('speechSynthesis' in window) { 
     window.speechSynthesis.cancel();
   }
+}
+
+export const showToastMessage = (msg, type) => {
+  toast[type](msg, TOAST_CONFIG);
 }

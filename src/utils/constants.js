@@ -111,3 +111,13 @@ export const ABOUT_INFO = [
   `I create websites which are more realistic & minimalistic in design.`,
   `I also work on Progressive Web Application (PWA's) development as well.`
 ]
+
+export const TOAST_CONFIG = {
+  position: "bottom-center",
+  autoClose: 3000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: false,
+  draggable: false,
+  progress: 0,
+}

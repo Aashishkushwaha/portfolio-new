@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import dotenv from 'dotenv';
 import './styles/animations.scss';
 import './styles/utility.scss';
 import './index.css';
 import App from './App';
 import Typed from 'typed.js'
 import reportWebVitals from './reportWebVitals';
+
+dotenv.config()
 
 window.addEventListener('DOMContentLoaded', () => {
   var options = {
