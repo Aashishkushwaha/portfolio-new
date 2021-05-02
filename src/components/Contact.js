@@ -59,10 +59,12 @@ const Contact = ({props: {theme, soundEnabled}}) => {
     emailjs.sendForm(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, formRef.current, EMAIL_USER_ID)
     .then(() => {
       setLoading(false)
-      showToastMessage("Message sent successfully!", "success")
+      soundEnabled && playTextToSound('Message sent successfully.')
+      showToastMessage("Message sent successfully.", "success")
     }, () => {
       setLoading(false)
-      showToastMessage("Some error occurred while sending message.", "error")
+      soundEnabled && playTextToSound('Some error occurred while sending message!')
+      showToastMessage("Some error occurred while sending message!", "error")
     })
     
     resetForm()
