@@ -4,7 +4,7 @@ import '../styles/Home.scss'
 
 const Home = ({theme}) => {
   return (
-    <section className="home" id="home">
+    <section className="home">
       <article className="home-dev-info">
         <p className="home-dev-intro">Hey Viewer<span className="wave wave-animation">👋</span> I'm,  
           <span className="mx-8 inline-block name">Aashish</span>

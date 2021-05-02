@@ -249,6 +249,18 @@
   animation: marquee-text 5s infinite ease-in-out both;
 }
 
+.toast {
+  font-size: 18px !important;
+}
+
+.Toastify__toast--success {
+  background: var(--toast-success) !important;
+}
+
+.Toastify__toast--error {
+  background: var(--toast-error) !important;
+}
+
 .section {
   padding: 5rem 8rem;
   &__heading {
@@ -256,7 +268,8 @@
     color: var(--secondary-background-dark);
     text-shadow: 1px 1px 3px rgba(0,0,0,.5),
       1px 1px 3px var(--white);
-    padding: 1rem 0;
+    padding: .8rem 0;
+    padding-top: 1.5rem;
 
     &-info {
       font-size: 1.6rem;

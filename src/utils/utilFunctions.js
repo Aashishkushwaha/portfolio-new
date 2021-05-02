@@ -59,3 +59,8 @@ export const pauseTextToSound = () => {
 export const showToastMessage = (msg, type) => {
   toast[type](msg, TOAST_CONFIG);
 }
+
+export const scrollToTop = () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

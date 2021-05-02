@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import { NAV_LINKS } from '../utils/constants'
-import { playSound, playTextToSound, saveToSessionStorage } from '../utils/utilFunctions'
+import { 
+  playSound, 
+  scrollToTop,
+  playTextToSound, 
+  saveToSessionStorage 
+} from '../utils/utilFunctions'
 import "../styles/Navbar.scss"
 
 const Navbar = ({props: {theme, soundEnabled, setSoundEnabled}}) => {
@@ -10,6 +15,7 @@ const Navbar = ({props: {theme, soundEnabled, setSoundEnabled}}) => {
 
   const onChangeHandler = (selected) => {
     setActive(selected)
+    setMenuOpen(false)
     if(soundEnabled)
       playSound("navigate")
   }
@@ -28,7 +34,7 @@ const Navbar = ({props: {theme, soundEnabled, setSoundEnabled}}) => {
       <header>
         <nav className="nav-container">
           <div className="nav-logo-box">
-            <a href="#home" onClick={() => setActive("")}>
+            <a href="#home" onClick={() => {setActive(""); scrollToTop()}}>
               <img 
                 className="nav-logo" alt="Aashish Kushwaha"
                 src={`./assets/images/logo_${theme === "light" ? 'light' : 'dark'}.svg`}
@@ -57,7 +63,7 @@ const Navbar = ({props: {theme, soundEnabled, setSoundEnabled}}) => {
     )
   else {
     return (
-      <header>
+      <header id="home">
         <nav className="nav-container">
           <div className="nav-logo-box">
             <a href="#home" onClick={() => setActive("")}>

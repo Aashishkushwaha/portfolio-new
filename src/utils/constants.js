@@ -80,10 +80,10 @@ export const SKILLS = [
 ]
 
 export const SOCIAL_CONNECT = [
+  { title: 'whatsapp', url: `https://wa.me/917709609778?text=Hello%20Aashish` },
   { title: 'linkedin', url: 'https://www.linkedin.com/in/aashish-kushwaha' },
   { title: 'github', url: 'https://github.com/Aashishkushwaha' },
   { title: 'twitter', url: 'https://twitter.com/aashish__7' },
-  { title: 'instagram', url: 'https://www.instagram.com/aashish.kushwaha7' },
 ]
 
 export const SERVICES = [

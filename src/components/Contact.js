@@ -72,7 +72,7 @@ const Contact = ({props: {theme, soundEnabled}}) => {
 
   return (
     <section className="section" id="contact">
-      <ToastContainer />
+      <ToastContainer className="toast"/>
       {loading && <Loader />}
       <h2 className="section__heading align-center">Get In Touch</h2>
       <h3 className="section__heading-info">
