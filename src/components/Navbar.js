@@ -66,7 +66,7 @@ const Navbar = ({props: {theme, soundEnabled, setSoundEnabled}}) => {
       <header id="home">
         <nav className="nav-container">
           <div className="nav-logo-box">
-            <a href="#home" onClick={() => setActive("")}>
+            <a href="#home" onClick={() => { setActive(""); scrollToTop() }}>
               <img 
                 className="nav-logo" alt="Aashish Kushwaha"
                 src={`./assets/images/logo_${theme === "light" ? 'light' : 'dark'}.svg`}
