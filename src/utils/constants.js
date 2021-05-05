@@ -24,19 +24,63 @@ export const NAV_LINKS = ['projects', 'skills', 'services', 'about', 'contact']
 export const PROJECTS = [
   {
     title: "Memories App",
-    imgUrl: "./assets/images/projects/memories.png",
+    imgUrl: "./assets/images/projects/memories/memories.png",
     liveUrl: "https://memories-mernapp.netlify.app",
     tags: ["MERN Stack", "React.js", "Node.js", "MongoDB"],
     githubUrl: "https://github.com/Aashishkushwaha/memories",
     description: "A simple MERN Stack application which is created to add the special memories which you'll cherish to your entire life.",
+    responsiveImages: [
+      {
+        media: "(max-width: 420px)",
+        srcSet: "./assets/images/projects/memories/memories_420.png"
+      },
+      {
+        media: "(max-width: 640px)",
+        srcSet: "./assets/images/projects/memories/memories_640.png"
+      },
+      {
+        media: "(max-width: 768px)",
+        srcSet: "./assets/images/projects/memories/memories_768.png"
+      },
+      {
+        media: "(max-width: 1280px)",
+        srcSet: "./assets/images/projects/memories/memories_1280.png"
+      },
+      {
+        media: "(min-width: 1280px)",
+        srcSet: "./assets/images/projects/memories/memories_desktop_1280.png"
+      },
+    ]
   },
   {
     title: "Stay Focused",
     tags: ["Javascript", "HTML", "CSS"],
     liveUrl: "https://stay-focused.vercel.app",
-    imgUrl: "./assets/images/projects/stayFocused.png",
+    imgUrl: "./assets/images/projects/stayFocused/stayFocused.png",
     githubUrl: "https://github.com/Aashishkushwaha/STAY_FOCUSED",
     description: "A Javascript application which will help you to stay focused to finish your work within the time, you can also add the task to the todo tasks list.",
+    responsiveImages: [
+      {
+        media: "(max-width: 420px)",
+        srcSet: "./assets/images/projects/stayFocused/stayFocused_420.png"
+      },
+      {
+        media: "(max-width: 640px)",
+        srcSet: "./assets/images/projects/stayFocused/stayFocused_640.png"
+      },
+      {
+        media: "(max-width: 768px)",
+        srcSet: "./assets/images/projects/stayFocused/stayFocused_768.png"
+      },
+      {
+        media: "(max-width: 1280px)",
+        srcSet: "./assets/images/projects/stayFocused/stayFocused_1280.png"
+      },
+      {
+        media: "(min-width: 1280px)",
+        srcSet: "./assets/images/projects/stayFocused/stayFocused_desktop_1280.png"
+      },
+    ]
   },
   {
     title: "Colorify",
@@ -45,6 +89,28 @@ export const PROJECTS = [
     imgUrl: "./assets/images/projects/colorify.png",
     githubUrl: "https://github.com/Aashishkushwaha/colorify",
     description: "A React.js application where you can find lot of colours, gradients & shades of colours which you can use for different purposes.",
+    responsiveImages: [
+      {
+        media: "(max-width: 420px)",
+        srcSet: "./assets/images/projects/colorify/colorify_420.png"
+      },
+      {
+        media: "(max-width: 640px)",
+        srcSet: "./assets/images/projects/colorify/colorify_640.png"
+      },
+      {
+        media: "(max-width: 768px)",
+        srcSet: "./assets/images/projects/colorify/colorify_768.png"
+      },
+      {
+        media: "(max-width: 1280px)",
+        srcSet: "./assets/images/projects/colorify/colorify_1280.png"
+      },
+      {
+        media: "(min-width: 1280px)",
+        srcSet: "./assets/images/projects/colorify/colorify_desktop_1280.png"
+      },
+    ]
   },
   {
     title: "Quiz App",
@@ -52,23 +118,89 @@ export const PROJECTS = [
     description: "A React.js quiz app where you can test your knowledge of various topics such as Science, Politics, Sports, Movies & much more.",
     liveUrl: "https://playquizapp.netlify.app",
     githubUrl: "https://github.com/Aashishkushwaha/Quizapp",
-    imgUrl: "./assets/images/projects/playQuiz.png"
+    imgUrl: "./assets/images/projects/playQuiz/playQuiz.png",
+    responsiveImages: [
+      {
+        media: "(max-width: 420px)",
+        srcSet: "./assets/images/projects/playQuiz/playQuiz_420.png"
+      },
+      {
+        media: "(max-width: 640px)",
+        srcSet: "./assets/images/projects/playQuiz/playQuiz_640.png"
+      },
+      {
+        media: "(max-width: 768px)",
+        srcSet: "./assets/images/projects/playQuiz/playQuiz_768.png"
+      },
+      {
+        media: "(max-width: 1280px)",
+        srcSet: "./assets/images/projects/playQuiz/playQuiz_1280.png"
+      },
+      {
+        media: "(min-width: 1280px)",
+        srcSet: "./assets/images/projects/playQuiz/playQuiz_desktop_1280.png"
+      },
+    ]
   },
   {
     title: "Drum Machine",
     tags: ["React.js", "CSS", "Audio"],
     liveUrl: "https://react-drumkit.netlify.app",
-    imgUrl: "./assets/images/projects/drumMachine.png",
+    imgUrl: "./assets/images/projects/drumMachine/drumMachine.png",
     githubUrl: "https://github.com/Aashishkushwaha/drum-machine",
     description: "A javascript application which is like a small instrument widget which will produce sound like drum on every press of the keyboard key.",
+    responsiveImages: [
+      {
+        media: "(max-width: 420px)",
+        srcSet: "./assets/images/projects/drumMachine/drumMachine_420.png"
+      },
+      {
+        media: "(max-width: 640px)",
+        srcSet: "./assets/images/projects/drumMachine/drumMachine_640.png"
+      },
+      {
+        media: "(max-width: 768px)",
+        srcSet: "./assets/images/projects/drumMachine/drumMachine_768.png"
+      },
+      {
+        media: "(max-width: 1280px)",
+        srcSet: "./assets/images/projects/drumMachine/drumMachine_1280.png"
+      },
+      {
+        media: "(min-width: 1280px)",
+        srcSet: "./assets/images/projects/drumMachine/drumMachine_desktop_1280.png"
+      },
+    ]
   },
   {
     title: "CSS Work",
     tags: ["CSS", "Responsive Web Design"],
     description: "A simple webpage which is modern, responsive, interactive & pleasing for the eyes. It also showcases the latest and modern design patterns, such as responsive images, solid gradients, animations and many more.",
     liveUrl: "https://csswork.netlify.app",
-    imgUrl: "./assets/images/projects/cssWork.png",
+    imgUrl: "./assets/images/projects/cssWork/cssWork.png",
     githubUrl: "https://github.com/Aashishkushwaha/responsive_page",
+    responsiveImages: [
+      {
+        media: "(max-width: 420px)",
+        srcSet: "./assets/images/projects/cssWork/cssWork_420.png"
+      },
+      {
+        media: "(max-width: 640px)",
+        srcSet: "./assets/images/projects/cssWork/cssWork_640.png"
+      },
+      {
+        media: "(max-width: 768px)",
+        srcSet: "./assets/images/projects/cssWork/cssWork_768.png"
+      },
+      {
+        media: "(max-width: 1280px)",
+        srcSet: "./assets/images/projects/cssWork/cssWork_1280.png"
+      },
+      {
+        media: "(min-width: 1280px)",
+        srcSet: "./assets/images/projects/cssWork/cssWork_desktop_1280.png"
+      },
+    ]
   },
 ]
 

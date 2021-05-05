@@ -19,7 +19,11 @@
     }
   ],
   "start_url": ".",
+  "scope": ".",
+  "lang": "en-US",
+  "direction": "rtl",
+  "orientation": "any",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#1da1f2",
   "background_color": "#ffffff"
 }

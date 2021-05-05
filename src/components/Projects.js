@@ -33,7 +33,15 @@ const Projects = ({props: {theme, soundEnabled}}) => {
             return (
               <li key={project.title} className="projects-item">
                 <div className="projects-item-thmbnail-container">
-                  <img src={project.imgUrl} alt="project logo" className="projects-item-thmbnail"/>
+                  {/* <img src={project.imgUrl} alt="project logo" className="projects-item-thmbnail"/> */}
+                  <picture>
+                    {
+                      project.responsiveImages.map(({media, srcSet}) => (
+                        <source key={media} className="projects-item-thmbnail" media={media} srcSet={srcSet} />
+                      ))
+                    }
+                    <img className="projects-item-thmbnail" src={project.imgUrl} alt={project.title} />
+                  </picture>
                 </div>
                 <div className="projects-item-details-container"
                   onMouseEnter={() => playProjectInfo(`${project.title} is -  ${project.description}`)}
