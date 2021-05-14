@@ -84,7 +84,7 @@ export const PROJECTS = [
   },
   {
     title: "Colorify",
-    tags: ["React.js", "CSS"],
+    tags: ["React.js", "Progressive Web App (PWA)", "CSS"],
     liveUrl: "https://colorify-react.netlify.app",
     imgUrl: "./assets/images/projects/colorify.png",
     githubUrl: "https://github.com/Aashishkushwaha/colorify",
