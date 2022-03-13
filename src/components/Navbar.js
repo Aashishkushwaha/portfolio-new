@@ -17,15 +17,12 @@ const Navbar = ({ props: { theme, soundEnabled, setSoundEnabled } }) => {
     let lastScroll = 0;
 
     window.addEventListener("scroll", () => {
-      if (window.innerWidth > 720) {
-        if (window.scrollY > lastScroll) {
-          document.querySelector("header").style.transform =
-            "translateY(-100px)";
-        } else {
-          document.querySelector("header").style.transform = "translateY(0px)";
-        }
-        lastScroll = window.scrollY;
+      if (window.scrollY > lastScroll) {
+        document.querySelector("header").style.transform = "translateY(-100px)";
+      } else {
+        document.querySelector("header").style.transform = "translateY(0px)";
       }
+      lastScroll = window.scrollY;
     });
   });
 
@@ -138,7 +135,7 @@ const Navbar = ({ props: { theme, soundEnabled, setSoundEnabled } }) => {
                 key={item}
                 onClick={() => onChangeHandler(item)}
                 className={`hamberger-nav-list__item ${
-                  active === item && "hamberger-active-link"
+                  active === item ? "hamberger-active-link" : ""
                 }`}
               >
                 <a href={`#${item}`} className="hamberger-nav-link">

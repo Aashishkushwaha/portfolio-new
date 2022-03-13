@@ -111,6 +111,10 @@
     color: var(--link-color);
     border-radius: 2px;
 
+    & a {
+      color: var(--white) !important;
+    }
+
     &:hover,
     &:focus,
     &:focus-within {
