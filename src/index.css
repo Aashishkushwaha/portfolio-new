@@ -13,7 +13,7 @@
   --grey: grey;
   --toast-success: #3b885b;
   --toast-error: #ed4233;
- 
+
   /* --secondary-background: #2ccab0; */
   /* --secondary-background: #67B9A4; */
   /* --secondary-background: #ff005c; */
@@ -29,11 +29,11 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: var(--primary-background);
   color: var(--primary-text);
   /* padding: 2rem 8rem; */
-  transition: background-color .5s, color .7s;
+  transition: background-color 0.5s, color 0.7s;
 }
 
 ::selection {
@@ -72,7 +72,8 @@ header {
   position: sticky;
   background: var(--primary-background);
   backface-visibility: hidden;
-  transition: background-color .5s, color .1s;
+  transition: background-color 0.5s, color 0.1s;
+  transition: transform 0.5s;
 }
 
 ::-webkit-scrollbar {
@@ -81,19 +82,19 @@ header {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 2px var(--grey); 
+  box-shadow: inset 0 0 2px var(--grey);
   /* border-radius: 10px; */
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--secondary-background); 
+  background: var(--secondary-background);
   /* border-radius: 10px; */
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary-background-dark); 
+  background: var(--secondary-background-dark);
 }
 
 @media screen and (max-width: 600px) {
