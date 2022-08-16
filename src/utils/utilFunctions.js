@@ -18,7 +18,6 @@ export const configureTheme = (theme) => {
   document.getElementById("favicon").href = `/favicon_${theme}.ico`;
   let rootElement = document.querySelector("html");
   const header = document.querySelector("nav");
-  console.log(header);
   header.style.setProperty("background", THEME_CONFIG[theme].primaryBackground);
   rootElement.style.setProperty(
     "--primary-background",
@@ -85,4 +84,12 @@ export const showToastMessage = (msg, type) => {
 export const scrollToTop = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+};
+
+export const shuffleArray = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
 };
